@@ -1,0 +1,10 @@
+body {
+	font-size: 11pt;
+	font-family: arial, sans-serif;
+}
+.button {
+	font-family: arial;
+	font-size: 11pt;
+	width: 100px;
+	height: 400px;
+}

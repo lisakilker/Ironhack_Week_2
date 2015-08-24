@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+
+<h1>This is my text</h1>
+
+<form action="/count_words" method="POST" enctype="multipart/form-data">
+<p>
+<label for="file">File:</label>
+<input type="file" name="file">
+</p>
+
+<p>
+<input name="commit" type="submit" value="Upload"/>
+</p>
+</form>
+
+<p>The number of words is <%= @tmp %></p>
+</html>
