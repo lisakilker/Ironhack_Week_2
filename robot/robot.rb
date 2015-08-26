@@ -1,4 +1,4 @@
-class RoboContender
+class Attacks
 
 	def attacks(weak, strong, definitive)
 		@weak = 10
