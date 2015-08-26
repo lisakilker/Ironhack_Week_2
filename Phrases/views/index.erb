@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="phrases-container">
+      <h1><%= @phrase %></h1>
+      <a href="/">Refresh</a>
+    </div>
+    <div class="phrases-list-container">
+      <ul>
+        <% @phrases.each_with_index do |phrase, index| %>
+          <li>
+            <%= phrase %>
+            <form action="/delete_phrase" method="post">
+              <input type="hidden" name="phrase_index" value="<%= index %>">
+              <input type="submit" name="delete" value="X">
+            </form>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>
