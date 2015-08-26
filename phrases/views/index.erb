@@ -6,17 +6,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-  <h1>These are my phrases:</h1>
-    <h2><%= @phrases.get_phrase %></h2>
-    <div class="boxed"><a href="/"style="text-decoration : none;">Refresh</a></div>
-<br>
-
-<form>Phrase:<br>
-<input type="text" name="firstname" value="Input">
-
-<br><input type="submit" value="Submit">
-</form>
-<br>
-
+    <div class="phrases-container">
+      <h1><%= @phrase %></h1>
+      <a href="/">Refresh</a>
+    </div>
+    <div class="phrases-list-container">
+      <ul>
+        <% @phrases.each_with_index do |phrase, index| %>
+          <li>
+            <%= phrase %>
+            <form action="/delete_phrase" method="post">
+              <input type="hidden" name="phrase_index" value="<%= index %>">
+              <input type="submit" name="delete" value="X">
+            </form>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </body>
 </html>

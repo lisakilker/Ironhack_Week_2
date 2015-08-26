@@ -1,16 +1,11 @@
-body {
-	font-size: 11pt;
-	font-family: arial, sans-serif;
-	font-size: 11pt;
-	background-color: #FF86B4;
-}
-a {
-    height: 400px;
-    width:  400px;
-}
-.boxed {
-  border: 1px solid blue;
-  width: 75px;
-  height: 17px;
+div.phrases-container {
+  width: 80%;
+  margin: 30px auto;
+  border: 2px solid black;
+  border-radius: 5px;
   text-align: center;
+}
+
+form {
+  display: inline-block;
 }
