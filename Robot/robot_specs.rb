@@ -1,7 +1,13 @@
 require_relative "./robot.rb"
-require_relative "./robotcage.rb"
-require_relative "./referee.rb"
 
-RSpec.describe RoboContenders do
-RSpec.describe Referee do
-RSpec.describe Attacks do
+RSpec.describe Contenders do
+
+let(:contenders){Contenders.new}
+
+describe "#robot_contenders method" do
+
+	it "creates robots" do
+		expect
+	end
+end
+

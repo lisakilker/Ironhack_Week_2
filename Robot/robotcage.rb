@@ -1,7 +1,5 @@
-class Robocontenders
+class RobotCage
 
-	def players(one, two)
-		@one = one
-		@two = two
+	def cage
 	end
 end

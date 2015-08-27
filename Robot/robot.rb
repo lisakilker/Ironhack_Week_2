@@ -1,9 +1,5 @@
-class Attacks
+class Contenders
 
-	def attacks(weak, strong, definitive)
-		@weak = 10
-		@strong = 20
-		@definitive = 50
+	def robot_contenders
 	end
 end
-
