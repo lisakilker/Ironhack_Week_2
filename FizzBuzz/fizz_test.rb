@@ -4,7 +4,7 @@ RSpec.describe Fizz do
 
 	before do
 		puts "This is my fizz!"
-		@run_fizz = Fizz.new
+		@fizz = Fizz.new
 	end
 
 	describe "#run_fizz" do
