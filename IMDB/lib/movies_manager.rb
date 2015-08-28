@@ -8,9 +8,9 @@ class MovieManager
     @movie << movie
   end
 
-  def get_movie
+  def show_poster
     @movie.limit(9)
-    puts @movie.results
+    puts @movie
   end
 end
 
