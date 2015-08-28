@@ -1,14 +1,14 @@
 require "imdb"
 require "sinatra"
-require_relative "lib/movie.rb"
-require_relative "lib/movie_manager.rb"
+require_relative "imdb2.rb"
+require_relative "movies_manager.rb"
 
 movie_manager = MovieManager.new
 
 # movies = ["The Goonies", "Mermaids"]
 
 get "/" do
-  @movie = movie_manager.get_movies
+  @movie = movie_manager.get_movie
   erb :imdb
 end
 
