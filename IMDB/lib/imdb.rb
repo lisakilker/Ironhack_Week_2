@@ -1,6 +1,5 @@
 require "imdb"
 require "sinatra"
-require_relative "imdb2.rb"
 require_relative "movies_manager.rb"
 
 movie_manager = MovieManager.new

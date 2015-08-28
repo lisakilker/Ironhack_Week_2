@@ -13,3 +13,5 @@ class MovieManager
     @movie
   end
 end
+
+

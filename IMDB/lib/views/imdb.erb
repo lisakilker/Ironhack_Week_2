@@ -1,14 +1,13 @@
-<h1>Movies</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <title>Movies</title>
+</head>
+<body>
+</body>
+</html>
 
-<ul>
-  <% @movies.each do |movie| %>
-    <li>
-      <%= movie.print %>
-      <form action="/remove_movie/<%= movie.id %>" method="post">
-        <input type="submit" name="remove_movie" value="X">
-      </form>
-    </li>
-  <% end %>
-</ul>
-
-<a href="/movies/new">Create new movie</a>
