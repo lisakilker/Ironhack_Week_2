@@ -1,7 +1,15 @@
 class MovieManager
 
+  def initialize
+    @movie = []
+  end
+
+  def movies(movie)
+    @movie << movie
+  end
+
   def get_movie
-    @movie.results = 9
+    @movie.limit(9)
     puts @movie.results
   end
 end

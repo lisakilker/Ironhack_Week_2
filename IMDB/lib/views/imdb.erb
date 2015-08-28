@@ -8,12 +8,18 @@
 </head>
 <body>
 <h1>MOVIE FUN!</h1>
-      <h2><%= @movies %></h2>
-      <form>Enter word that describes a move you want to see:<br>(For example: funny, scary)<br>
+      <h2><%= @movie %></h2>
+      <%= end %>
+      <%= @movie.first(9).each do |movies| %>
+      <%= end %>
+      <form>Enter word that describes a move you want to see:<br>
+      (For example: funny, scary)<br>
       <input type="text" name="movietitle">
       <a href="/">Submit</a>
       <br>
       </form>
+    <!--   <img src="[...]" onClick="alert('Yay!')"/>
+      <img src="[...]" onClick="alert('Nay!')"/> -->
 </body>
 </html>
 
