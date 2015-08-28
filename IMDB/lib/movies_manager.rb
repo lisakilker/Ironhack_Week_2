@@ -1,17 +1,22 @@
+require 'imdb'
+
 class MovieManager
 
-  def initialize
-    @movie = []
+  def initialize(text)
+    @text = text
+    @movielist = []
   end
 
-  def movies(movie)
-    @movie << movie
+  def search_name
+    @movie = Imdb::Search.new(@text).movies[1]
   end
 
-  def show_poster
-    @movie.limit(9)
-    puts @movie
-  end
+  # def poster
+  # end
+
+  # def release_date
+  # end
+
 end
 
 

@@ -5,19 +5,19 @@
     <title>Movies</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
+  <h1>MOVIE FUN!</h1>
 <body>
-    <h1>MOVIE FUN!</h1>
-      <h2><%= @movie %></h2>
-        <%= end %>
-        <%= @movie.first(9).each do |movies| %>
-        <%= end %>
-      <form>Enter word that describes a move you want to see:<br>
-        (For example: funny, scary)<br>
-        <input type="text" name="movietitle">
-        <a href="/">Submit</a><br>
+    <div>
+      <h2>Enter your favorite movie:</h2>
+      <form action="/text", method='post'>
+      <input type="text" name="text">
+        <input type="submit">
+      </div>
       </form>
-    <!--   <img src="[...]" onClick="alert('Yay!')"/>
-      <img src="[...]" onClick="alert('Nay!')"/> -->
 </body>
 </html>
 
+
+
+    
+     
