@@ -1,11 +1,12 @@
 require "Imdb"
 require "sinatra"
 
-set :port, 3009
+set :port, 3010
 
 class GetMovies
-attr_accessor :movies
-	def initialize
+attr_accessor :name
+	def initialize(name)
+		@name = name
 		@movies = IO.readlines("movies.txt")
 	end
 
@@ -14,7 +15,13 @@ attr_accessor :movies
 		end
 	end
 
-	def has_poster
+	def has_poster?
+	end
+
+	def genre
+	end
+
+	def release_date
 	end
 end
 
