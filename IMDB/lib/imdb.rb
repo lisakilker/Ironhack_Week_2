@@ -12,22 +12,8 @@ get "/" do
   erb :imdb
 end
 
-post "/remove_task/:task_id" do
-  task_id = params[:task_id].to_i
-  movie_manager.remove_movie(movie_id)
-  redirect to("/")
-end
-
 get "/movie/new" do
   erb :imdb
-end
-
-post "/movie" do
-  content = params[:movie]
-  movie = movie.new(content)
-  movie_manager.add_movie(movie)
-
-  redirect to("/")
 end
 
 get "/has_poster" do
