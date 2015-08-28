@@ -13,5 +13,6 @@ body {
 a {
 	font-size: 10pt;
 	font-family: arial, sans-serif;
-	color: red;
+	color: green;
+	text-decoration: none;
 }

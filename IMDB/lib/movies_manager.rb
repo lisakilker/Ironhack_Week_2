@@ -1,16 +1,8 @@
 class MovieManager
 
-  def initialize
-    @movie = []
-  end
-
-  def add_task(movie)
-    @movie << movie
-  end
-
   def get_movie
-    puts @movie
-    @movie
+    @movie.results = 9
+    puts @movie.results
   end
 end
 
