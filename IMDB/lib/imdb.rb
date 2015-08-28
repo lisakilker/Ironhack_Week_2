@@ -1,30 +1,41 @@
 require "Imdb"
 require "sinatra"
 
-set :port, 3010
+set :port, 3013 
+enable :sessions
 
-class GetMovies
-attr_accessor :name
-	def initialize(name)
-		@name = name
-		@movies = IO.readlines("movies.txt")
-	end
+movies = ["The Goonies", "Mermaids"]
 
-	def send_movies_DB
-		@movies.each do |movie|
-		end
-	end
+get "/:movies" do
+  	@movies = params[:movies]
+  	erb :imdb
+end
 
-	def has_poster?
-	end
+post '/' do
+  @movies = params[:movies]
+  redirect to("/")
+end
 
-	def genre
-	end
+get '/:movies' do
+  session[:movies] = params[:movies]
+end
 
-	def release_date
-	end
+get '/' do
+  "movies = " + session[:movies]
+end
+
+get "/has_poster" do
+end
+
+get "/genre" do
+end
+
+get "/year" do
+end
+
+post "/movie" do
+  	redirect to("/")
 end
 
 
-# new_collection = GetMovies.new
-# new_collection.send_movies_DB
+

@@ -18,7 +18,7 @@ let(:mermaids){GetMovies.new("Mermaids")}
   		#show error if there are less than 2 results for that search term
 	end
 
-	it "should confirm if release date user entered is correct" do
+	it "should confirm if year user entered is correct" do
 		#ask user to guess which year the movie was made and use javascript to show if they were right or wrong
 	end
 end
