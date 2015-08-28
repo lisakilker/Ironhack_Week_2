@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-    <body>
-     	<img src="[...]" onClick='alert("Yay")'/>
-    	<img src="[...]" onClick='alert("Nay")'/>
-      <div class="movie-container">
-      <h1><%= @movies %></h1>
-      <a href="/">Refresh</a>
-      </div>
-      <div class="movie-list-container">
-        <ul>
-        <%= @movies.each do |movies| %>
-         <% end %>
-          <li>
-            <form action="/" method="POST">
-              <input type="text" name="movies">
-              <input.button type="submit" value="New Movie>>">
-            </form>
-          </li>
-      </ul>
-    </div>
-    </body>
-</html>
+<h1>Movies</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= movie.print %>
+      <form action="/remove_movie/<%= movie.id %>" method="post">
+        <input type="submit" name="remove_movie" value="X">
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/movies/new">Create new movie</a>
